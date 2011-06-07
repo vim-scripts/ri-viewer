@@ -1,0 +1,88 @@
+*ri-viewer.txt* ri interface
+
+last changed:   2011-06-07
+maintainer:     Daehyub Kim <lateau@gmail.com>
+version:        1.0
+license:        vim license
+
+==============================================================================
+1. Contents                                             *ri-viewer-contents*
+
+    Installation            : |ri-viewer-install|
+    Manual                  : |ri-viewer-manual|
+    Bugs                    : |ri-viewer-bugs|
+
+==============================================================================
+1. Installation                                         *ri-viewer-install*
+
+installation
+
+Just copy ri-viewer.vim to your vim runtimepath/plugin simply.
+Generally, the path is $HOME/.vim/plugin. See :help 'runtimepath' for
+details.
+
+==============================================================================
+2. Manual                                               *ri-viewer-manual*
+                                                        *ri-viewer*
+
+ri-viewer looks up every doc-dirs in you system that referenced by 'ri' with
+a keyword.
+
+2.1 Variables                                           *ri-viewer-variables*
+
+If you want specified ri command instead of using 'ri', you can set your own
+command with ri_prog:
+
+  let ri_prog = 'ri19'
+
+You can also set bufwin height with ri_height:
+
+  let ri_height = 10
+
+2.1 Functions                                           *ri-viewer-functions*
+
+:Ri                                                     *Ri*
+
+Display ri in every doc-dirs. See :RiDirs for the directories.
+
+:RiCore                                                 *RiCore*
+
+Display ri only from ruby standard libraries and site ruby.
+
+:RiGem                                                  *RiGem*
+
+Display ri only from rubygems.
+
+:RiHome                                                 *RiHome*
+
+Display ri only in your home directory(~/.ri).
+
+:RiList                                                 *RiList*
+
+Display ri database.
+
+:RiDirs                                                 *RiDirs*
+
+Display all ri document directories.
+
+2.2 Mappings                                            *ri-viewer-mappings*
+
+Bellow mapping allows to you look up ri with <cword> on current cursor.
+
+:Ri
+  <leader>ri
+:RiCore
+  <leader>rc
+:RiGem
+  <leader>rg
+:RiHome
+  <leader>rh
+
+==============================================================================
+3. Bugs                                                 *ri-viewer-bugs*
+
+You might feel free to contact to me:
+Daehyub Kim <lateau@gmail.com>
+http://github.com/lateau
+
+vim:tw=78:ft=help

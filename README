@@ -1,0 +1,29 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3621
+
+ri-viewer.vim looks up ruby document directories with a keyword such like class name or method.
+
+You can retrieve details of class Object with bellow command:
+
+:Ri Object
+
+and a method detail
+
+:Ri Object#help
+:Ri Object.help
+
+If you want to look up documents included in specified dirs such like rubygems, home, try to bellow sub command:
+
+:RiCore
+:RiGem
+:RiHome
+
+RiCore retrieves ri documents included from /rubylib/system and /rubylib/site.
+RiGem retrieves from rubygems and RiHome does it from your home dir(~/.ri).
+
+You can also get all classes and modules list:
+
+:RiList
+
+Also documents directories:
+
+:RiDirs
